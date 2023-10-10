@@ -368,8 +368,8 @@ ${ENDGROUP}`)
       const start = new Date().getTime()
       let outputChunks = []
 
-      const shouldRecordTestWithReplay = process.env.RECORD_REPLAY && isRetry
-
+      const shouldRecordTestWithReplay = process.env.RECORD_REPLAY
+      // const shouldRecordTestWithReplay = process.env.RECORD_REPLAY && isRetry
       const args = [
         ...(shouldRecordTestWithReplay
           ? [`--config=jest.replay.config.js`]
